@@ -1,0 +1,438 @@
+/*Resetando as configurações*/
+body, h1, h2, h3, p, ul{
+    padding:0px;
+    margin:0px;  
+}
+body{
+    font-family: Georgia, serif;
+    color:#252525;
+}
+*{
+    box-sizing: border-box;
+    /*soma os valors de margin e padding de todos elementos*/
+}
+/*Menu*/
+.menu{
+    background:#252525;
+    padding:20px 0;
+    /*definindo a area de contato
+    do header*/
+}
+.menu-container{
+    max-width: 960px;
+    margin:0 auto ;
+    /*definindo a margem e largura maxima
+    da div(logo + o menu*/
+}
+.menu-container::after,.menu-container::before{
+    content:'';
+    display: table;
+    clear:both;
+   /*cria m conteudo invisivel*/
+    /*clearfix: a div menucontainer
+    fica com um display tipo tabela 
+    antes e depois dela*/
+}
+a.menu-logo{
+    display:block;/*o elemento pega toda vertical, por padrão ja vem assim*/
+    float: left;
+    /*a logo vai flutuar ao lado os elementos
+    q vierem dps*/
+    margin-left: 1px;
+}
+.menu-nav{
+    float:right;
+    /*o menu vai flutuar a direita 
+    da logo*/
+    margin-right: 10px;
+}
+.menu-nav li{
+    display: inline-block;
+    /*coloca os elementos da
+    lista um ao lado do outro*/
+}
+.menu-nav a {
+    display: block;
+    padding: 10px;
+    /*os links do menu com display block/bloqueado
+    e area de contato de 10px*/
+    text-decoration: none;
+    color:#fff;
+    font-size: 1.125em;
+}
+@media (max-width:739px){
+    .menu{
+        text-align: center;
+    }
+    a.menu-logo{
+        float:none;
+        margin: 0 auto;
+    }
+    .menu-nav{
+        float: none;
+        clear: both;
+    }
+    
+}
+/*Introdução*/
+.intro{
+    background: url('../Cafeteria-Sobral/img/bg-intro.jpg') no-repeat center center;
+    background-size: cover;/*a imagem diminui de acordo com a tela, não perdendo todo conteudo*/
+    padding: 150px 0;/*é o espaço do que tem entre o conteudo dentro do container introdução, onde fica com 150px em cima e embaixo e 0px dos lados*/
+    text-align: center;
+    color: #fff;
+}
+.intro h1{
+    text-transform: uppercase;
+    font-size: 3em;
+}
+.intro h1::after{/*cria depois do h1 um conteudo com as propriedades abaixo*/
+    content:'';
+    display: block;
+    width:20px;
+    height: 4px;
+    background: #fff;
+    margin: 10px auto;/*10px no topo e no bottom e automatico aos lados*/
+}
+.intro p{
+    font-style: italic;
+    font-size: 1.125em;
+}
+@media(max-width:739){
+    .intro{
+        padding:60px 0;
+    }
+}
+
+/*Sobre*/
+.sobre{
+    padding: 60px 0;
+}
+.sobre-container{
+    max-width: 960px;
+    margin:0 auto ;
+    
+}
+.sobre-container::after,.sobre-container::before{
+    content:'';
+    display: table;
+    clear:both;
+  
+}
+.sobre h2{
+    text-align: center;
+    font-size: 2.25em;
+    margin-bottom: 60px;
+    
+}
+.sobre-item{
+    width: 460px;/*cada elemento de sobre-item vai ter essa largura*/
+    float:left; /*flutua ao lado*/
+    margin: 0 10px;
+}
+.sobre-item img{
+    display: block;
+    max-width: 100%;
+
+}
+.sobre-item h3{
+    color:#fff;
+    font-style: italic;
+    background-color: #252525;
+    font-size: 2.25em;
+    width:220px;
+    font-weight: normal;/*tira o negrito*/
+    text-align: center;
+    line-height: 1em;/*altura da linha*/
+    padding: 5px 0 10px 0;
+    top: -25px;/*posiciona o topo da img*/
+    position:relative;
+}
+.sobre >p{
+    font-size: 1.125em;
+    line-height: 1.4em;
+    font-style: italic;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 460px;
+}
+
+@media(min-width:740px) and (max-width:980px){
+    .sobre-container{
+        max-width:720px
+    }
+    .sobre-item{
+        width: 340px;
+    }
+}
+@media (max-width:739px){
+    .sobre-container{
+        max-width: 300px;
+    }
+    .sobre-item{
+        width: 300px;
+    }
+}
+
+/*Produtos*/
+.produtos{
+    background: #e7e4d8;
+    padding: 60px 0;
+    border-top: 3px solid #d6d3c8;
+    border-bottom: 3px solid #d6d3c8;
+
+}   
+.produtos-container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.produtos-container::before, .produtos-container::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.produtos-itens{
+    width: 300px;
+    float: left;
+    margin: 0 10px 20px 10px;
+}
+.produtos-itens h2{
+    text-align: center;
+    font-size: 2.25em;
+    margin-bottom: 20px;
+
+}
+.produtos-itens h2::before{
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: currentColor;
+    border-radius: 50%;
+    margin: 20px auto;
+    border: 5px solid #e7e4d8;
+    box-shadow: 0 0 0 10px currentColor;
+}
+h2.produto-sotero{
+    color:#492901;
+}
+h2.produto-apimenta{
+    color:#c17139;
+}
+h2.produto-cafemilho{
+    color:#d7a54d;
+}
+.produtos-itens p{
+    font-size: 0.875em;
+    line-height: 1.4em;
+}
+.produtos-btn{
+    width:180px;
+    border: 3px solid #252525;
+    color: #252525;
+    text-decoration: none;
+    display: block;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 0;
+    margin: 20px auto 0 auto;
+}
+@media(min-width:740px) and (max-width:980px){
+    .produtos-container{
+        max-width:720px;
+    }
+    .produtos-item{
+        width: 220px;
+    }
+}
+@media (max-width:739px){
+    .produtos-container{
+        max-width: 300px;
+    }
+    .produtos-item{
+        margin: 0 auto 20px auto;
+    }
+}
+/*Locais*/
+.locais{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.locais-item{
+    clear: both;
+    margin: 60px auto;
+}
+.locais-item::before,.locais-item::after{
+    display: table;
+    content: '';
+    clear: both;
+}
+.locais-item img{
+    width: 460px;
+    display: block;
+    float: left;
+    margin:0 10px;
+    
+}
+.locais-item > div{
+    width: 460px;
+    float:left;
+    margin: 0 10px;
+}
+.locais-item h2{
+    font-size: 2.25em;
+    margin-bottom: 20px;
+}
+.locais-item p{
+    font-size: 1.125em;
+    line-height: 1.4em;
+    max-width: 320px;
+    margin-bottom: 40px;
+}
+.locais-item a{
+   
+    border: 3px solid;
+    color: #252525;
+    text-decoration: none;
+    font-size: 1.125em;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+@media(min-width:740px) and (max-width:980px){
+    .locais{
+        max-width: 720px;
+    }
+    .locais-item > div, .locais-item img{
+    width: 340px;
+    }
+}
+@media (max-width:739px){
+    .locais{
+        max-width: 300px;
+    }
+    .locais-item img{
+        width: 300px;
+        margin: 0px;
+
+    }
+    
+    
+}
+/*Assine*/
+.assine{
+    background: #e7e4d8;
+    padding: 30px 0;
+}
+.assine-container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.assine-container::before, .assine-container::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.assine-info{
+    width: 460px;
+    margin: 0 10px;
+    float: left;
+
+}
+.assine-info h2{
+    font-size: 2.25em;
+}
+.assine-info p{
+    font-size: 1.5em;
+    font-style: italic;
+}
+.assine form{
+    width: 460px;
+    margin: 10px 0 10px 0;
+    float:left;
+}
+.assine form label{
+    display: none;
+}
+.assine input{
+    width: 320px;
+    border: 3px solid #252525;
+    background: none;
+    font-size: 1.5em;
+    font-style: italic;
+    font-family: Georgia, serif;
+    padding: 10px;
+    float: left;
+}
+.assine button{
+    background-color: #252525;
+    border: none;
+    font-family: Georgia,serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    width: 140px;
+    padding: 13px 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media(min-width:740px) and (max-width:980px){
+    .assine-container{
+        max-width: 720px;
+    }
+    .assine-info, .assine input,.assine form{
+        width: 340px;
+    }    
+    
+}
+@media (max-width:739px){
+    .assine-container{
+        max-width: 300px;
+    }
+    .assine-info, .assine input,.assine form{
+        max-width: 300px;
+        margin: 10px 0 0 0;
+    }
+    
+    
+    
+}
+.footer{
+    background: #252525;
+    padding: 40px 0;
+}
+.footer-container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.footer-container::after,.footer-container::before{
+    content: '';
+    display: block;
+    clear: both;
+}
+.footer p{
+    float:left;
+    margin: 0 10px;
+    font-size: 1.125em;
+    line-height: 1.4em;
+    color:#fff;
+}
+.footer img{
+    float: right;
+    margin: 0 10px;
+    display: block;
+}
+@media(max-width:739px){
+    .footer-container{
+        max-width: 300px;
+    }
+    .footer p{
+        float:none;
+    }
+    .footer img{
+        float:none;
+        margin:20px 0;
+    }
+}
