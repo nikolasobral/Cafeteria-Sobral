@@ -1,2 +1,2 @@
 # Cafeteria-Sobral
-Projeto desenvolvido durante o curso de CSS AVANÇADO E POSICIONAMENTO pelo site ORIGAMID
+Projeto desenvolvido durante o curso de CSS AVANÇADO E POSICIONAMENTO do site ORIGAMID
